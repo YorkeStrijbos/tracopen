@@ -68,14 +68,14 @@ function render(dir = 1) {
       <h2 class="quiz-q" id="quizTitle">${QUIZ[step].q}</h2>
       <form class="quiz-form" id="quizForm">
         <div class="field-row">
-          <div class="field"><label for="q-name">Naam</label><input id="q-name" name="name" autocomplete="name" required value="${c.name || ''}"></div>
-          <div class="field"><label for="q-company">Bedrijf</label><input id="q-company" name="company" autocomplete="organization" value="${c.company || ''}"></div>
+          <div class="field"><label for="q-name">Naam</label><input id="q-name" name="name" autocomplete="name" required value="${esc(c.name || '')}"></div>
+          <div class="field"><label for="q-company">Bedrijf</label><input id="q-company" name="company" autocomplete="organization" value="${esc(c.company || '')}"></div>
         </div>
         <div class="field-row">
-          <div class="field"><label for="q-email">E-mail</label><input id="q-email" name="email" type="email" autocomplete="email" required value="${c.email || ''}"></div>
-          <div class="field"><label for="q-phone">Telefoon</label><input id="q-phone" name="phone" type="tel" autocomplete="tel" value="${c.phone || ''}"></div>
+          <div class="field"><label for="q-email">E-mail</label><input id="q-email" name="email" type="email" autocomplete="email" required value="${esc(c.email || '')}"></div>
+          <div class="field"><label for="q-phone">Telefoon</label><input id="q-phone" name="phone" type="tel" autocomplete="tel" value="${esc(c.phone || '')}"></div>
         </div>
-        <div class="field"><label for="q-msg">Nog iets dat we moeten weten? <em>(optioneel)</em></label><textarea id="q-msg" name="message" rows="3" placeholder="Bijvoorbeeld het product dat je in gedachten hebt.">${c.message || ''}</textarea></div>
+        <div class="field"><label for="q-msg">Nog iets dat we moeten weten? <em>(optioneel)</em></label><textarea id="q-msg" name="message" rows="3" placeholder="Bijvoorbeeld het product dat je in gedachten hebt.">${esc(c.message || '')}</textarea></div>
         <div class="quiz-nav">
           <button type="button" class="quiz-back" data-back>← vorige</button>
           <button type="submit" class="btn btn-primary btn-lg">verstuur ${icon('arrow-right')}</button>
@@ -105,7 +105,7 @@ const go = (to, dir) => { step = to; render(dir); };
 stage.addEventListener('click', e => {
   const opt = e.target.closest('[data-opt]');
   if (opt) {
-    answers[QUIZ[step].key] = opt.dataset.opt.replace(/&amp;/g, '&');
+    answers[QUIZ[step].key] = opt.dataset.opt;
     stage.querySelectorAll('.quiz-opt').forEach(b => b.classList.toggle('sel', b === opt));
     setTimeout(() => go(step + 1, 1), reduceMotion ? 0 : 280); // automatisch door
     return;

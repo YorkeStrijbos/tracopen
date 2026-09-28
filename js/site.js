@@ -6,7 +6,7 @@
 const $ = s => document.querySelector(s);
 const $$ = s => [...document.querySelectorAll(s)];
 const icon = n => `<svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-${n}"/></svg>`;
-const esc = s => s.replace(/&/g, '&amp;');
+const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
 const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const finePointer = matchMedia('(hover: hover) and (pointer: fine)').matches;
 const clamp01 = v => Math.min(1, Math.max(0, v));
