@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<script>document.documentElement.classList.add('js')</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- PREVIEW: verwijder deze regel als de site echt live gaat -->
+<meta name="robots" content="noindex, nofollow">
+<title>Portfolio — Tracopen</title>
+<meta name="description" content="Van automotive en retail tot horeca en industrie: voor uiteenlopende merken ontwikkelen, sourcen en produceren we producten volledig op maat.">
+<meta name="theme-color" content="#1B2238">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Portfolio — Tracopen">
+<meta property="og:description" content="Van idee naar product. Voor merken die je kent.">
+<meta property="og:locale" content="nl_NL">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Naar inhoud</a>
+
+<header class="site" id="top">
+  <div class="wrap nav-row">
+    <a href="index.html" class="logo" aria-label="Tracopen home"><img src="assets/img/logo.png" alt="Tracopen" width="180" height="29"></a>
+    <nav class="nav" id="nav" aria-label="Hoofdmenu">
+      <a href="index.html">home</a>
+      <a href="over-ons.html">over ons</a>
+      <a href="diensten.html">diensten</a>
+      <a href="portfolio.html" class="active" aria-current="page">portfolio</a>
+      <a href="#contact">contact</a>
+      <a href="#contact" class="btn btn-primary" data-open-quiz>vrijblijvend sparren <svg class="ico"><use href="assets/icons.svg#i-arrow-right"/></svg></a>
+    </nav>
+    <a href="#contact" class="btn btn-primary btn-header" data-open-quiz>vrijblijvend sparren <svg class="ico"><use href="assets/icons.svg#i-arrow-right"/></svg></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Menu openen" aria-expanded="false" aria-controls="nav"><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="page-hero">
+  <img class="page-hero-q" id="heroQ" src="assets/img/logo-mark.png" alt="" aria-hidden="true">
+  <div class="wrap">
+    <div class="eyebrow">Portfolio</div>
+    <h1 class="page-title split-words">Van idee naar product. Voor merken die je kent<span class="dot">.</span></h1>
+    <p class="page-lead">Van automotive en retail tot horeca en industrie. Voor uiteenlopende bedrijven ontwikkelen, sourcen en produceren we producten volledig op maat.</p>
+    <div class="page-cta"><a href="#contact" class="btn btn-primary" data-open-quiz>vrijblijvend sparren <svg class="ico"><use href="assets/icons.svg#i-arrow-right"/></svg></a></div>
+  </div>
+</section>
+
+<!-- UITGELICHTE PROJECTEN -->
+<section class="section section-tight">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Uitgelichte projecten</div>
+      <h2 class="h2">Producten die merken versterken<span class="dot">.</span></h2>
+    </div>
+    <div class="projects stagger" id="projects"></div>
+  </div>
+</section>
+
+<!-- KLANTEN PER BRANCHE + LOGO'S -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Klanten per branche</div>
+      <h2 class="h2">Meer bedrijven waar we voor werken<span class="dot">.</span></h2>
+    </div>
+    <div class="branches reveal" role="group" aria-label="Filter klanten op branche" id="branches"></div>
+    <div class="logos stagger" id="logos"></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <div class="wrap">
+    <div class="contact reveal">
+      <div class="contact-copy">
+        <div class="eyebrow">Vrijblijvend sparren</div>
+        <h2 class="h2">Klaar om samen iets moois te creëren<span class="dot">?</span></h2>
+        <p class="lead">Laten we jouw ideeën omzetten in echte producten. Wij begeleiden je van begin tot eind.</p>
+        <div class="direct">
+          <a href="mailto:info@tracopen.com"><svg class="ico"><use href="assets/icons.svg#i-mail"/></svg>info@tracopen.com</a>
+          <a href="tel:+31341741041"><svg class="ico"><use href="assets/icons.svg#i-phone"/></svg>+31 341 741 041</a>
+        </div>
+      </div>
+      <div class="quiz-teaser">
+        <div class="quiz-teaser-head">
+          <span class="quiz-badge">5 vragen</span>
+          <span class="quiz-time">± 1 minuut</span>
+        </div>
+        <h3>Vertel ons kort over je plannen, wij doen de rest.</h3>
+        <ol class="quiz-steps" id="quizTeaserSteps"></ol>
+        <a href="#contact" class="btn btn-primary btn-lg" data-open-quiz>start de 5 vragen <svg class="ico"><use href="assets/icons.svg#i-arrow-right"/></svg></a>
+        <p class="form-note">Geen verplichtingen. We nemen daarna persoonlijk contact met je op.</p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-col">
+        <a href="index.html" class="logo logo-foot" aria-label="Tracopen home"><img src="assets/img/logo.png" alt="Tracopen" width="180" height="29"></a>
+        <p style="margin-top:8px;max-width:300px">Wij verbinden bedrijven met betrouwbare Chinese producenten en verzorgen het volledige traject: van sourcing en productie tot levering.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Pagina's</h4>
+        <a href="index.html">Home</a><a href="over-ons.html">Over ons</a><a href="diensten.html">Diensten</a><a href="portfolio.html">Portfolio</a><a href="#contact">Contact</a>
+      </div>
+      <div class="foot-col">
+        <h4>Kantoren</h4>
+        <div><strong>Tracopen B.V.</strong><br>Nobelstraat 31, 3846 CE Harderwijk<br>Nederland</div>
+        <div><strong>Tracopen China</strong><br>JianChen Building, South Business District, Yinzhou, Ningbo, China</div>
+      </div>
+      <div class="foot-col">
+        <h4>Contact</h4>
+        <a href="mailto:info@tracopen.com">info@tracopen.com</a><a href="tel:+31341741041">+31 341 741 041</a>
+      </div>
+    </div>
+    <div class="foot-bottom"><span>© <span id="year">2026</span> Tracopen B.V. Alle rechten voorbehouden.</span><a href="#top">Terug naar boven ↑</a></div>
+  </div>
+</footer>
+
+<script src="js/site.js"></script>
+<script src="js/quiz.js"></script>
+<script src="js/components.js"></script>
+<script src="js/portfolio.js"></script>
+</body>
+</html>
